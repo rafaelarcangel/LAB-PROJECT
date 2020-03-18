@@ -1,0 +1,15 @@
+@startuml
+rectangle TicTacToe(2019-2020){
+(TicTacToe)--->(Game Mode)
+(Game Mode)-->(Player1 vs Player2)
+(Player vs Machine)<-(Game Mode)
+(Game Mode)->(Machine vs Machine)
+}
+Participant----(Player vs Machine)
+Participant-[hidden](Player1 vs Player2)
+(Player1 vs Player2)---Participant1
+Participant2-(Machine vs Machine)
+Participant --> (WIN/LOSE)
+Participant1 --> (WIN/LOSE)
+Participant2 --> (WIN/LOSE)
+@enduml
